@@ -1,0 +1,87 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@2.14.12
+3 info using node@v4.2.6
+4 verbose readDependencies loading dependencies from C:\Users\rjskkn\workspace\FirstNodeJsWithExpress\package.json
+5 verbose install where, deps [ 'C:\\Users\\rjskkn\\workspace\\FirstNodeJsWithExpress',
+5 verbose install   [ 'express', 'jade' ] ]
+6 verbose install where, peers [ 'C:\\Users\\rjskkn\\workspace\\FirstNodeJsWithExpress', [] ]
+7 verbose installManyTop reading for lifecycle C:\Users\rjskkn\workspace\FirstNodeJsWithExpress\package.json
+8 info preinstall FirstNodeJsWithExpress@0.0.1
+9 verbose readDependencies loading dependencies from C:\Users\rjskkn\workspace\FirstNodeJsWithExpress\package.json
+10 silly cache add args [ 'jade@*', null ]
+11 verbose cache add spec jade@*
+12 silly cache add parsed spec Result {
+12 silly cache add   raw: 'jade@*',
+12 silly cache add   scope: null,
+12 silly cache add   name: 'jade',
+12 silly cache add   rawSpec: '*',
+12 silly cache add   spec: '*',
+12 silly cache add   type: 'range' }
+13 silly addNamed jade@*
+14 verbose addNamed "*" is a valid semver range for jade
+15 silly addNameRange { name: 'jade', range: '*', hasData: false }
+16 silly mapToRegistry name jade
+17 silly mapToRegistry using default registry
+18 silly mapToRegistry registry https://registry.npmjs.org/
+19 silly mapToRegistry uri https://registry.npmjs.org/jade
+20 verbose addNameRange registry:https://registry.npmjs.org/jade not in flight; fetching
+21 silly cache add args [ 'express@3.2.6', null ]
+22 verbose cache add spec express@3.2.6
+23 silly cache add parsed spec Result {
+23 silly cache add   raw: 'express@3.2.6',
+23 silly cache add   scope: null,
+23 silly cache add   name: 'express',
+23 silly cache add   rawSpec: '3.2.6',
+23 silly cache add   spec: '3.2.6',
+23 silly cache add   type: 'version' }
+24 silly addNamed express@3.2.6
+25 verbose addNamed "3.2.6" is a plain semver version for express
+26 silly mapToRegistry name express
+27 silly mapToRegistry using default registry
+28 silly mapToRegistry registry https://registry.npmjs.org/
+29 silly mapToRegistry uri https://registry.npmjs.org/express
+30 verbose addNameVersion registry:https://registry.npmjs.org/express not in flight; fetching
+31 verbose request uri https://registry.npmjs.org/jade
+32 verbose request no auth needed
+33 info attempt registry request try #1 at 1:28:45 PM
+34 verbose request id f11a007dbd1af9c3
+35 http request GET https://registry.npmjs.org/jade
+36 verbose request uri https://registry.npmjs.org/express
+37 verbose request no auth needed
+38 info attempt registry request try #1 at 1:28:45 PM
+39 http request GET https://registry.npmjs.org/express
+40 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 23.235.40.162:443
+41 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 23.235.40.162:443
+42 info attempt registry request try #2 at 1:29:16 PM
+43 http request GET https://registry.npmjs.org/jade
+44 info attempt registry request try #2 at 1:29:16 PM
+45 http request GET https://registry.npmjs.org/express
+46 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 23.235.40.162:443
+47 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 23.235.40.162:443
+48 info attempt registry request try #3 at 1:30:37 PM
+49 http request GET https://registry.npmjs.org/jade
+50 info attempt registry request try #3 at 1:30:37 PM
+51 http request GET https://registry.npmjs.org/express
+52 verbose stack Error: connect ETIMEDOUT 23.235.44.162:443
+52 verbose stack     at Object.exports._errnoException (util.js:870:11)
+52 verbose stack     at exports._exceptionWithHostPort (util.js:893:20)
+52 verbose stack     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1063:14)
+53 verbose cwd C:\Users\rjskkn\workspace\FirstNodeJsWithExpress
+54 error Windows_NT 6.1.7601
+55 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+56 error node v4.2.6
+57 error npm  v2.14.12
+58 error code ETIMEDOUT
+59 error errno ETIMEDOUT
+60 error syscall connect
+61 error network connect ETIMEDOUT 23.235.44.162:443
+61 error network This is most likely not a problem with npm itself
+61 error network and is related to network connectivity.
+61 error network In most cases you are behind a proxy or have bad network settings.
+61 error network
+61 error network If you are behind a proxy, please make sure that the
+61 error network 'proxy' config is set properly.  See: 'npm help config'
+62 verbose exit [ 1, true ]

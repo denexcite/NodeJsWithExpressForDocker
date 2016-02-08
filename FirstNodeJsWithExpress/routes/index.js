@@ -1,8 +1,15 @@
+var express = require('express')
+  , router = express.Router()
 
-/*
- * GET home page.
- */
+router.use('/animals', require('./animals'))
+router.use('/cars', require('./cars'))
 
-exports.index = function(req, res){
-  res.render('index', { title: 'Express' });
-};
+router.get('/', function(req, res) {
+  res.send('Home page')
+})
+
+router.get('/about', function(req, res) {
+  res.send('Learn about us')
+})
+
+module.exports = router

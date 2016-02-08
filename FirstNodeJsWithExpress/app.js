@@ -1,10 +1,4 @@
-/**
- * Module dependencies.
- */
-
 var express = require('express'),
-             routes = require('./routes'), 
-             user = require('./routes/user'),
              http = require('http'), 
              bodyParser = require('body-parser'),
              morgan = require('morgan'),
@@ -13,12 +7,14 @@ var express = require('express'),
              path = require('path');
 
 var app = express();
-
+  
 // all environments
+ //views and "view engine" are required for jade
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 
+//app.use sets the middleware
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({
 	extended : true
@@ -26,16 +22,10 @@ app.use(bodyParser.urlencoded({
 app.use(methodOverride());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// development only
-if ('development' == app.get('env')) {
-	app.use(errorHandler());
-}
+//this is the main use which sets the routes directory. routes/index.js is the main routes file which
+//loads routes from other files in that directory
+app.use(require('./routes'));
 
-app.get('/', routes.index);
-app.get('/users', user.list);
-
-http.createServer(app).listen(app.get('port'), function() {
-	console.log('Express server listening on port ' + app.get('port'));
+app.listen(3000, function() {
+  console.log('Listening on port 3000...');
 });
-
-

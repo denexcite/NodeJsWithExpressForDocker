@@ -10,7 +10,7 @@ router.get('/domestic', function(req, res) {
 // Wild animals page
 router.get('/wild', function(req, res) {
  // res.send('Cow, Horse, Sheep')
-	res.render('animals',  {title: 'Wild Animals', arr : ['Wolf', 'Fox', 'Eagle']});
+	res.render('animals',  {title: 'Wild Animals', arr : ['Wolf', 'Fox', 'Eagle', 'Tiger']});
 })
 
 module.exports = router;
